@@ -9,5 +9,6 @@ Implementation of Programming projects examples from [Automate the Boring Stuff 
 2. __WebPageDownload:__   *A program to download webpages and saving them to local harddisk using requests library.*
   
    TODO: 
+   
      [ ] Check Encoding Error while printing the webpage received.  
  
