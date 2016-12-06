@@ -10,3 +10,5 @@ Implementation of Programming projects examples from [Automate the Boring Stuff 
   TODO: [ ] Check Encoding Error while printing the webpage received.  
 3. __GoogleSearchHelpCLient:__ *# A Web scraping program to query google for a search term and open the First few links automatically in the browser . Hence avoiding the trouble to open the links by hand.* 
   TODO: [ ] Handle issue of youtube links not opening correctly ,mainly an issue of character encoding or conversion.
+  
+ 
