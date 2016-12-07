@@ -7,8 +7,11 @@ from selenium.webdriver.common.keys import Keys
 browser= webdriver.Chrome()
 browser.get("https://gabrielecirulli.github.io/2048/")
 html=browser.find_element_by_tag_name('body')
+
 for i in range(100):
 	html.send_keys(Keys.UP,Keys.RIGHT,Keys.DOWN,Keys.LEFT)
+
+# TODO: Maybe find a better way of playing and to increase the score.
 
 
 
