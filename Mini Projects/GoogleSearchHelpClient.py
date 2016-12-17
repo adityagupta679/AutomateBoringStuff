@@ -5,7 +5,7 @@
 # Hence avoiding the trouble to open the links by hand .
 
 
-import sys,requests, bs4 , pyperclip, webbrowser
+import sys,requests, bs4 , pyperclip, webbrowser, urllib
 
 search_term="" 
 # Checking cmd line arguments , if none given, 
@@ -36,14 +36,20 @@ urls=[]
 for link in links :
 	href=link.get('href')
 	urls.append(href[href.find("q=")+2:href.find("&sa")])
+
+# Decoding the url to replace % values like %3f for / Handling issue of youtube links not working
+
+urls=[urllib.unquote(url).decode('utf8') for url in urls]
 print "Openinng Google results for the Search term: {}. \nThe links are: {} ".format(search_term,str(urls))
-# open the links in the webbrowser
+
+# open the links in the webbrowser , limiting to 6 results
 for url in urls[:6]:
 	webbrowser.open(url)
 
 # TODO:
-# Handle issue of youtube links not opening correctly ,
+# [*] Handle issue of youtube links not opening correctly ,
 # mainly an issue of character encoding or conversion 
+# Handled the issue with youtube links by using urllib's decode function
 
 
 

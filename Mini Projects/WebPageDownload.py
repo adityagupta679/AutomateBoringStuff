@@ -27,10 +27,12 @@ res.raise_for_status()
 
 # print(len(res.text))
 
-# TODO:
-# Printing received text is giving encoding error, need to look into it. 
 
-# print(res.text[:150])
+# Printing received text is giving encoding error, needed to look into it. 
+# Instead of using res.text[:150] , we can use res.content[:250] to avoid encoding error. ERROR resolved :) :) 
+
+# print(res.content[:250])
+
 # saving to harddisk
 
 rj = open("RomioJuliet.txt","wb")
